@@ -1,4 +1,4 @@
-<div id="id01"></div>
+<div="id01"></div>
 
 <script>
 var xmlhttp = new XMLHttpRequest();
@@ -6,7 +6,7 @@ var url = "http://backend-k8s-hands-on";
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
+        var resp = JSON.parse(this.responseText);
         document.getElementById("id01").innerHTML = "<h2> La hora es " + resp.time + "</h2>";
     }
 };
